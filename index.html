@@ -201,45 +201,64 @@
             font-weight: 700;
         }
 
-        .formation {
+        /* Formation Section */
+        .formation-section {
             background: #f0f4f8;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            border-left: 4px solid #0066cc;
-            transition: all 0.3s ease;
+            padding: 4rem 2rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            margin: 0 2rem 4rem 2rem;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
         }
 
-        .formation:hover {
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
-            transform: translateX(5px);
-        }
-
-        .formation h3 {
+        .formation-section h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
             color: #0066cc;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            text-align: center;
             font-weight: 700;
         }
 
-        .formation-item {
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e0e7f1;
+        .formation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .formation-item:last-child {
-            border-bottom: none;
+        .formation-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #0066cc;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+            transition: all 0.3s ease;
         }
 
-        .formation-item strong {
+        .formation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 102, 204, 0.2);
+            border-left-color: #0052a3;
+        }
+
+        .formation-card h3 {
             color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
-        .formation-item p {
-            font-size: 0.95rem;
+        .formation-card .degree {
+            color: #0066cc;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .formation-card p {
             color: #666;
-            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Services Section */
@@ -307,13 +326,13 @@
             line-height: 1.6;
         }
 
-        /* Services Image */
-        .services-image-container {
+        /* Services Video */
+        .services-video-container {
             margin-top: 3rem;
             text-align: center;
         }
 
-        .services-image {
+        .services-video {
             width: 100%;
             max-width: 800px;
             height: auto;
@@ -322,7 +341,7 @@
             transition: transform 0.3s ease;
         }
 
-        .services-image:hover {
+        .services-video:hover {
             transform: scale(1.02);
         }
 
@@ -444,12 +463,14 @@
                 flex-direction: column;
             }
 
-            .services-grid {
+            .services-grid,
+            .formation-grid {
                 grid-template-columns: 1fr;
             }
 
             .about,
             .services,
+            .formation-section,
             .contact {
                 margin-left: 1rem;
                 margin-right: 1rem;
@@ -494,23 +515,29 @@
                     <p>Soy <span class="highlight">Meritxell Estibaliz Tatis Rujano</span>, consultora digital y especialista en marketing estratégico con más de una década de experiencia transformando negocios.</p>
                     <p>Originaria de <span class="highlight">Panamá</span>, he dedicado mi carrera a comprender cómo funcionan los mercados digitales y cómo las estrategias bien ejecutadas generan resultados tangibles.</p>
                     <p>Mi pasión es ayudar a empresas como la tuya a crecer, posicionarse en el mercado digital y aumentar su rentabilidad a través de estrategias personalizadas y basadas en datos.</p>
-                    <div class="formation">
-                        <h3>📚 Formación Académica</h3>
-                        <div class="formation-item">
-                            <strong>Máster en Marketing Digital & Ecommerce</strong>
-                            <p>Universidad en Madrid, España</p>
-                        </div>
-                        <div class="formation-item">
-                            <strong>Licenciatura en Marketing Digital</strong>
-                            <p>Universidad en Panamá</p>
-                        </div>
-                        <div class="formation-item">
-                            <strong>Especialista en SEO y Marketing Online</strong>
-                            <p>Certificaciones profesionales actualizadas</p>
-                        </div>
-                    </div>
                 </div>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop" alt="Profesional en marketing digital" class="about-image">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=600&fit=crop" alt="Profesional en marketing digital" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section class="formation-section" id="formation">
+        <div class="container">
+            <h2>Formación Académica</h2>
+            <div class="formation-grid">
+                <div class="formation-card">
+                    <h3>📚 Máster</h3>
+                    <div class="degree">Marketing Digital & Ecommerce</div>
+                    <p><strong>EAE Business School</strong></p>
+                    <p style="color: #0066cc; font-size: 0.9rem; margin-top: 1rem;">Madrid, España</p>
+                </div>
+                <div class="formation-card">
+                    <h3>🎓 Licenciatura</h3>
+                    <div class="degree">Mercadeo y Comercio Internacional</div>
+                    <p><strong>Universidad Tecnológica de Panamá</strong></p>
+                    <p style="color: #0066cc; font-size: 0.9rem; margin-top: 1rem;">Panamá</p>
+                </div>
             </div>
         </div>
     </section>
@@ -518,7 +545,7 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2>Servicios que Ofrezco</h2>
+            <h2>Servicios</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🎯</div>
@@ -536,8 +563,11 @@
                     <p>Optimización en buscadores para aumentar tu visibilidad orgánica. Estrategias SEO técnicas, de contenidos y link building para dominar Google.</p>
                 </div>
             </div>
-            <div class="services-image-container">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop" alt="Estrategia de marketing digital" class="services-image">
+            <div class="services-video-container">
+                <video class="services-video" autoplay muted loop>
+                    <source src="https://cdn.pixabay.com/vimeo/772844851/Business%20People%20Meeting%20And%20Working%20Together%2050994.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
             </div>
         </div>
     </section>
