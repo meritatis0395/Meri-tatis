@@ -212,7 +212,6 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
             animation: glow 2.5s ease-in-out infinite;
         }
 
@@ -399,6 +398,47 @@
             animation: fadeInUp 0.6s ease-out;
         }
 
+        /* Video Section */
+        .video-section {
+            background: white;
+            padding: 4rem 2rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            margin: 0 2rem 4rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08);
+            animation: fadeInUp 0.8s ease-out 0.5s backwards;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #0066cc;
+            text-align: center;
+            font-weight: 700;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        .services-video {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .services-video:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.25);
+        }
+
         /* Services Section */
         .services {
             background: #f0f4f8;
@@ -406,7 +446,7 @@
             margin-bottom: 4rem;
             border-radius: 12px;
             margin: 0 2rem 4rem 2rem;
-            animation: fadeInUp 0.8s ease-out 0.5s backwards;
+            animation: fadeInUp 0.8s ease-out 0.6s backwards;
         }
 
         .services h2 {
@@ -415,7 +455,7 @@
             color: #0066cc;
             text-align: center;
             font-weight: 700;
-            animation: slideInRight 0.8s ease-out;
+            animation: slideInLeft 0.8s ease-out;
         }
 
         .services-grid {
@@ -499,27 +539,6 @@
 
         .service-card:hover p {
             color: #2c3e50;
-        }
-
-        /* Services Video */
-        .services-video-container {
-            margin-top: 3rem;
-            text-align: center;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .services-video {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .services-video:hover {
-            transform: scale(1.03);
-            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.25);
         }
 
         /* Contact Section */
@@ -706,7 +725,8 @@
             .about,
             .services,
             .formation-section,
-            .contact {
+            .contact,
+            .video-section {
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
@@ -755,7 +775,7 @@
                     <p>Originaria de <span class="highlight">Panamá</span>, he dedicado mi carrera a comprender cómo funcionan los mercados digitales y cómo las estrategias bien ejecutadas generan resultados tangibles.</p>
                     <p>Mi pasión es ayudar a empresas como la tuya a crecer, posicionarse en el mercado digital y aumentar su rentabilidad a través de estrategias personalizadas y basadas en datos.</p>
                 </div>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop" alt="Consultoría Digital" class="about-image">
+                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=600&fit=crop" alt="Oficina de consultoría digital" class="about-image">
             </div>
         </div>
     </section>
@@ -781,6 +801,19 @@
         </div>
     </section>
 
+    <!-- Video Section (BEFORE Services) -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2>Nuestro Trabajo en Acción</h2>
+            <div class="video-container">
+                <video class="services-video" width="800" height="450" autoplay muted loop>
+                    <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_30fps.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -801,12 +834,6 @@
                     <h3>SEO & Posicionamiento</h3>
                     <p>Optimización en buscadores para aumentar tu visibilidad orgánica. Estrategias SEO técnicas, de contenidos y link building para dominar Google.</p>
                 </div>
-            </div>
-            <div class="services-video-container">
-                <video class="services-video" width="800" height="450" autoplay muted loop controls>
-                    <source src="https://videos.pexels.com/video-files/3194519/3194519-sd_640_360_30fps.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
             </div>
         </div>
     </section>
